@@ -1,120 +1,43 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import ProjectAbstract from "./ProjectAbstract";
 
 function Projects() {
   return (
-    <section id="projects" className="w-full py-10">
-      <h1 className="text-3xl font-bold text-gray-800 mb-5">
-        Projects{" "}
-        <span className="text-gray-600 font-normal underline underline-offset-2">
-          Completed
-        </span>
+    <section id="projects" className="w-full h-full flex flex-col gap-10 mt-5">
+      <h1 className="text-5xl text-center text-transparent bg-gradient-to-r from-[#85858f] via-slate-600 to-[#1e1e22] font-semibold -tracking-tighter bg-clip-text">
+        Projects
       </h1>
-      <p className="text-center text-gray-600 text-sm mb-10">
-        Click on the Project Image.
-      </p>
-
-      <div className="grid grid-flow-row lg:grid-cols-2 gap-5 gap-y-5 w-full h-full place-content-center">
-        <div className="flex flex-col gap-2">
-          <p className="text-sm font-sans">
-            1.CaseCraze - create custom phone case
-          </p>
-
-          <div className="border h-60 border-gray-700 hover:border-4 hover:bg-green-500 rounded-md overflow-hidden">
-            <Link href="/casecraze">
-              <Image
-                className="w-full h-full object-fill  "
-                src="/casecraze.png"
-                alt="casecraze"
-                width={200}
-                height={200}
-              />
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col gap-2">
-          <p className="text-sm font-sans">
-            2.GoShop - Trendy, high quality fashion wear.
-          </p>
-          <div className="border h-60 border-gray-700 hover:border-4 hover:bg-green-500 rounded-md overflow-hidden">
-            <Link href="/goshop">
-              <Image
-                className="w-full h-full object-fill  "
-                src="/goshop.png"
-                alt="goshop"
-                width={200}
-                height={200}
-              />
-            </Link>
-          </div>
-        </div>
-        <div>
-          <h1 className="text-md font-bold">
-            3.Custom Authentication and Payment Integration
-          </h1>
-          <div className="text-sm">
-            <p className="font-bold">Description :- </p>
-            <p>
-              I've developed this simple and sample project, demonstrating my
-              ability to implement custom authentication and payment
-              integration.
-            </p>
-            <div>
-              <p>Key features :-</p>
-              <ul className="list-disc ml-3">
-                <li>
-                  Authentication: Implemented two login options:
-                  credentials-based login and Google authentication.
-                </li>
-                <li>
-                  Payment Integration: Integrated Stripe for transaction
-                  handling. Both features are fully Implemented at a
-                  production-level.
-                </li>
-              </ul>
-              <div className="ml-3">
-                <p>
-                  Live Link :{" "}
-                  <span>
-                    <a
-                      target="_blank"
-                      className="text-blue-700 font-medium hover:text-blue-900"
-                      href="https://auth-stripe-five.vercel.app"
-                    >
-                      Link
-                    </a>
-                  </span>
-                </p>
-                <p>
-                  Github Link :{" "}
-                  <span>
-                    <a
-                      target="_blank"
-                      className="text-blue-700 font-medium hover:text-blue-900"
-                      href="https://github.com/abhialuru/auth-stripe"
-                    >
-                      Link
-                    </a>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="border h-60 border-gray-700 hover:border-4 hover:bg-green-500 rounded-md overflow-hidden">
-          <a href="https://auth-stripe-five.vercel.app" target="_blank">
-            <Image
-              className="w-full h-full object-fill  "
-              src="/auth-stripe.png"
-              alt="Auth & Stripe"
-              width={200}
-              height={200}
-            />
-          </a>
-        </div>
-        <div></div>
-      </div>
+      <ProjectAbstract
+        title="CaseCraze - Create your custom phone case."
+        techStack=" Next.js, React.js, Typescript, Postgres, Edgestore(Image storage),
+          Clerk, Tailwind css, Shadcn UI, DND(drag and drop), Rnd(Resizable and
+          Draggable), Razorpay."
+        description="This project is a fully responsive web application that allows users
+          to personalize their phone cases. Unlike traditional online stores,
+          users can upload their own images, adjust the design to fit a phone
+          case template, and choose from a variety of colors and materials. Once
+          satisfied with the design, they can easily place an order for a custom
+          phone case tailored to their preferences."
+        projectLink="https://casecraze.vercel.app"
+        imageSrc1="/casecraze.png"
+        imageSrc2="/casecraze-2.png"
+      />
+      <ProjectAbstract
+        title="GoShop - Trendy, high quality fashion wear."
+        techStack=" Next.js, React.js, Typescript,
+          Tailwind css, Shadcn UI, Redux Toolkit, stripe."
+        description="A fully responsive e-commerce web app focused on a seamless shopping experience. Implemented cart functionality with Redux Toolkit for state management, enabling users to add, remove, and update items in the cart. Integrated Stripe for payment processing, and for a smooth checkout process. Designed the front-end using TailwindCSS and ShadCN UI for an intuitive and modern UI/UX."
+        projectLink="https://goshop-rose.vercel.app"
+        imageSrc1="/goshop.png"
+        imageSrc2="/go-shop-3.png"
+      />
+      <ProjectAbstract
+        title="Custom Authentication and Payment Integration."
+        techStack=" Next.js, React.js, Typescript, Tailwind css, Shadcn UI, neon Postgres, Auth.js, Stripe(with webhook)."
+        description="I built this simple and sample project with custom authentication and payment integration. For authentication, provided two login options: credentials-based login and Google authentication. For payments, I integrated Stripe to handle transactions. Both features are fully implemented at a production level."
+        projectLink="https://auth-stripe.vercel.app"
+        imageSrc1="/auth-stripe.png"
+        imageSrc2="/auth-stripe-2.png"
+      />
     </section>
   );
 }
