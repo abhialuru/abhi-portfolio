@@ -26,7 +26,10 @@ function ProjectAbstract({
     <div className="w-full lg:w-[80%] overflow-hidden mx-auto hover:scale-105 rounded-lg transition-all duration-300 flex flex-col lg:flex-row gap-5 hover:bg-[#ECEFF1] h-[80%] px-5 lg:p-10">
       <div className="w-full lg:w-1/2 flex flex-col gap-3 lg:justify-around">
         <h1 className="text-2xl font-bold text-gray-900">{title}</h1>
-        <div className="text-gray-700 text-sm tracking-tight">{techStack}</div>
+        <div className="text-gray-700 text-sm tracking-tight">
+          <span className="font-bold text-gray-900">Built with :- </span>
+          {techStack}
+        </div>
         <p className="text-gray-900 text-sm tracking-tight">
           <span className="font-bold text-gray-900">Description :- </span>
           {description}
@@ -50,6 +53,7 @@ function ProjectAbstract({
             alt="project images"
             width={400}
             height={400}
+            loading="lazy"
           />
         </div>
         <div className="w-full shrink-0 h-[45%] border border-gray-200">
@@ -59,6 +63,7 @@ function ProjectAbstract({
             alt="project images"
             width={400}
             height={400}
+            loading="lazy"
           />
         </div>
       </div>
