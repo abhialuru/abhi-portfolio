@@ -1,6 +1,23 @@
-import { GithubIcon, LinkedinIcon, Mail } from "lucide-react";
-import { Button } from "./ui/button";
+import { GithubIcon, LinkedinIcon, LucideIcon, Mail } from "lucide-react";
 import Link from "next/link";
+import { Button } from "./ui/button";
+
+interface LinkButtonTypes {
+  href: string;
+  name: string;
+  Icon: LucideIcon;
+}
+
+function LinkButton({ href, name, Icon }: LinkButtonTypes) {
+  return (
+    <Link href={href} target="_blank">
+      <Button variant={"outline"} className="w-48">
+        <Icon className="text-blue-400" fill="fill" />
+        {name}
+      </Button>
+    </Link>
+  );
+}
 
 function Contact() {
   return (
@@ -13,24 +30,21 @@ function Contact() {
           Contacts
         </h1>
         <div className="max-w-fit flex flex-col lg:flex-row gap-5 mx-auto">
-          <Link href="https://www.linkedin.com/in/abhialuru" target="_blank">
-            <Button variant={"outline"} className="w-48">
-              <LinkedinIcon className="text-blue-400" fill="fill" />
-              Linkedin
-            </Button>
-          </Link>
-          <Link href="mailto:alurabhi9346@gmail.com" target="_blank">
-            <Button variant={"outline"} className="w-48">
-              <Mail />
-              Gmail
-            </Button>
-          </Link>
-          <Link href="https://github.com/abhialuru" target="_blank">
-            <Button variant={"outline"} className="w-48">
-              <GithubIcon />
-              Github
-            </Button>
-          </Link>
+          <LinkButton
+            href="https://www.linkedin.com/in/abhialuru"
+            name="LinkedIn"
+            Icon={LinkedinIcon}
+          />
+          <LinkButton
+            href="mailto:alurabhi9346@gmail.com"
+            name="Gmail"
+            Icon={Mail}
+          />
+          <LinkButton
+            href="https://github.com/abhialuru"
+            name="GitHub"
+            Icon={GithubIcon}
+          />
         </div>
       </div>
     </section>

@@ -20,8 +20,6 @@ function ProjectAbstract({
   imageSrc1,
   imageSrc2,
 }: ProjectAbstractTypes) {
-  console.log(projectLink);
-
   return (
     <div className="w-full lg:w-[80%] overflow-hidden mx-auto hover:scale-105 rounded-lg transition-all duration-300 flex flex-col lg:flex-row gap-5 hover:bg-[#ECEFF1] h-[80%] px-5 lg:p-10">
       <div className="w-full lg:w-1/2 flex flex-col gap-3 lg:justify-around">
