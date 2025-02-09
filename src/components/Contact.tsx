@@ -23,7 +23,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="w-full h-[100dvh] mt-10 flex justify-center items-center"
+      className="w-full min-h-screen flex justify-center items-center"
     >
       <div className="max-w-xl">
         <h1 className="text-5xl text-center text-transparent bg-gradient-to-r from-[#85858f]  via-slate-600 to-[#1e1e22] font-semibold -tracking-tighter bg-clip-text mb-10">

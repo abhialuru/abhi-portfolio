@@ -5,7 +5,7 @@ function Intro() {
   return (
     <main
       id="about"
-      className="w-full h-[100dvh] flex items-center lg:items-end justify-center text-center px-3 lg:p-20"
+      className="w-full min-h-screen flex items-center lg:items-end justify-center text-center px-3 lg:p-20"
     >
       <div className="max-w-2xl flex flex-col gap-5 items-center justify-center">
         <h1 className="text-5xl text-transparent bg-gradient-to-r from-[#85858f]  via-slate-600 to-[#1e1e22] font-semibold -tracking-tighter bg-clip-text">

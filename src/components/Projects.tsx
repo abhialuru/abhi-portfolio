@@ -2,7 +2,10 @@ import ProjectAbstract from "./ProjectAbstract";
 
 function Projects() {
   return (
-    <section id="projects" className="w-full h-full flex flex-col gap-10 mt-5">
+    <section
+      id="projects"
+      className="w-full h-full flex flex-col gap-10 mt-5 mb-10"
+    >
       <h1 className="text-5xl text-center text-transparent bg-gradient-to-r from-[#85858f] via-slate-600 to-[#1e1e22] font-semibold -tracking-tighter bg-clip-text">
         Projects
       </h1>

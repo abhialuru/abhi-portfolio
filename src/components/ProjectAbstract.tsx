@@ -21,7 +21,7 @@ function ProjectAbstract({
   imageSrc2,
 }: ProjectAbstractTypes) {
   return (
-    <div className="w-full lg:w-[80%] overflow-hidden mx-auto hover:scale-105 rounded-lg transition-all duration-300 flex flex-col lg:flex-row gap-5 hover:bg-[#ECEFF1] h-[80%] px-5 lg:p-10">
+    <div className="w-full lg:w-[80%] overflow-hidden mx-auto lg:hover:scale-105 rounded-lg transition-all duration-300 flex flex-col lg:flex-row gap-5 hover:bg-[#ECEFF1] h-auto px-5 lg:p-10">
       <div className="w-full lg:w-1/2 flex flex-col gap-3 lg:justify-around">
         <h1 className="text-2xl font-bold text-gray-900">{title}</h1>
         <div className="text-gray-700 text-sm tracking-tight">
@@ -44,22 +44,24 @@ function ProjectAbstract({
         </div>
       </div>
       <div className="w-full h-full lg:w-1/2 flex flex-col justify-around">
-        <div className="w-full h-[45%] border border-gray-200">
+        <div className="w-full h-auto border border-gray-200">
           <Image
-            className="w-full h-full object-fill"
+            className="w-full h-full object-cover"
             src={imageSrc1}
             alt="project images"
             width={500}
             height={500}
+            loading="lazy"
           />
         </div>
-        <div className="w-full h-[45%] border border-gray-200">
+        <div className="w-full h-auto border border-gray-200">
           <Image
-            className="w-full h-full object-fill"
+            className="w-full h-full object-cover"
             src={imageSrc2}
             alt="project images"
             width={500}
             height={500}
+            loading="lazy"
           />
         </div>
       </div>
