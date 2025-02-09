@@ -12,7 +12,7 @@ function LinkButton({ href, name, Icon }: LinkButtonTypes) {
   return (
     <Link href={href} target="_blank">
       <Button variant={"outline"} className="w-48">
-        <Icon className="text-blue-400" fill="fill" />
+        <Icon />
         {name}
       </Button>
     </Link>

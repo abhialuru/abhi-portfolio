@@ -43,25 +43,23 @@ function ProjectAbstract({
           </Link>
         </div>
       </div>
-      <div className="w-full lg:w-1/2 flex flex-col justify-around">
-        <div className="w-full shrink-0 h-[45%] border border-gray-200">
+      <div className="w-full h-full lg:w-1/2 flex flex-col justify-around">
+        <div className="w-full h-[45%] border border-gray-200">
           <Image
             className="w-full h-full object-fill"
             src={imageSrc1}
             alt="project images"
-            width={400}
-            height={400}
-            loading="lazy"
+            width={500}
+            height={500}
           />
         </div>
-        <div className="w-full shrink-0 h-[45%] border border-gray-200">
+        <div className="w-full h-[45%] border border-gray-200">
           <Image
             className="w-full h-full object-fill"
             src={imageSrc2}
             alt="project images"
-            width={400}
-            height={400}
-            loading="lazy"
+            width={500}
+            height={500}
           />
         </div>
       </div>
